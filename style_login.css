@@ -1,0 +1,161 @@
+          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,300;1,700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    max-width: 80px;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    display: inline-block;
+    color: #faf7f7;
+    font-weight: 800;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative; /* Needed for absolute positioning of title */
+}
+
+.title {
+    position: absolute; /* Position the title absolutely */
+    top: 20px; /* Distance from the top of the container */
+    left: 20px; /* Distance from the left of the container */
+    font-size: 36px; /* Title font size */
+    font-weight: bold; /* Title font weight */
+    color: #fff; /* Default color (white) */
+    font-family: 'Arial', sans-serif; /* Title font family */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.green-text {
+    color: #017143; /* Make the 'F' and 'S' green */
+}
+
+.img-box {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login-box {
+    width: 45%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.thumb {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.thumb img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            color: #fff;
+        }
+        .login-container {
+            background: rgba(1, 1, 1, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            background: #fff;
+            color: #017143;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0eb749;
+            color: #fff;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9em;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,130 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fallback color */
+    color: white;
+    background-image: url('Apple\,\ drops\,\ black\ background\ wallpaper\,\ background.jpeg'); /* Escaped file name */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: scroll; /* Fix the background during scroll */
+    background-size: contain; /* Cover the entire viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for proper centering */
+}
+
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10; /* Ensure the header is above the form */
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #faf7f7;
+    font-weight: 800;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+/* Form Container Styling */
+.container {
+    background: rgba(6, 6, 6, 0.9); /* Semi-transparent black */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 400px;
+    animation: slideIn 1.5s ease-in-out;
+    z-index: 5; /* Ensure it appears above the background */
+    position: relative; /* For proper stacking */
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form Elements Styling */
+h2 {
+    text-align: center;
+    color: #63c55d;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ddd; /* Adjust label color for better contrast */
+}
+
+input[type="text"], select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #63c55d;
+    box-shadow: 0 0 8px rgba(84, 181, 87, 0.5);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(to right, #63c55d, #decdc7);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #206321, #63c55d);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
