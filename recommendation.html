@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Fitness Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_rec.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <a href="#"><img src="{{ url_for('static', filename='_.jpeg') }}" class="logo" alt="FitSense Logo"></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Your Personalized Fitness Recommendation</h1>
+        <div class="buttons">
+            <button onclick="showModal('dietModal')">Diet Recommendations</button>
+            <button onclick="showModal('workoutModal')">Workout Recommendations</button>
+            <button onclick="showModal('suggestionsModal')">Suggestions</button>
+        </div>
+    </div>
+
+    <!-- Diet Modal -->
+    <div id="dietModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('dietModal')">&times;</span>
+            <h2>Diet Recommendations</h2>
+            <ul>
+                {% for diet in recommendations.Diet_Recommendations %}
+                    <li>{{ diet }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Workout Modal -->
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('workoutModal')">&times;</span>
+            <h2>Workout Recommendations</h2>
+            <ul>
+                {% for workout in recommendations.Workout_Recommendations %}
+                    <li>{{ workout }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Suggestions Modal -->
+    <div id="suggestionsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('suggestionsModal')">&times;</span>
+            <h2>Suggestions</h2>
+            <ul>
+                {% for suggestion in recommendations.Suggestions %}
+                    <li>{{ suggestion }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showModal(modalID) {
+            document.getElementById(modalID).style.display = "block";
+        }
+
+        function closeModal(modalID) {
+            document.getElementById(modalID).style.display = "none";
+        }
+
+       
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        };
+
+       
+        function formatFitnessPlan(text) {
+            const lines = text.split("\n");
+            return lines.map(line => {
+                if (line.startsWith("*")) {
+                    return `* ${line.replace(/^\*+/, '').trim()}`;
+                } else if (line.startsWith("**")) {
+                    return `**${line.replace(/^\*+/, '').trim()}**`;
+                }
+                return line.trim();
+            }).join("\n");
+        }
+
+        
+        const rawOutput = "Your raw AI output here";
+        const formattedOutput = formatFitnessPlan(rawOutput);
+        document.getElementById("output").innerText = formattedOutput;
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Personalized Diet and Workout Recommendation System</title>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#"><img src="{{ url_for('static', filename='_.jpeg') }}" class="logo" alt="Logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="text-box">
+                <h2>Fitness and Health? <br> It's <span>FitSense</span></h2>
+                <p style="margin-bottom: 20px;"><b>Are You Struggling to See Results?</b><br>
+                    Tired of endless workouts and diets that don’t work? FitSense understands the frustration of inconsistent progress and the confusion of finding what truly suits your body type.
+                    </p>
+                    <p style="margin-bottom: 20px;"><b>What We Offer</b><br>
+                    FitSense provides a smart and personalized workout and diet recommendation system tailored to your unique profile, goals, and preferences. Say goodbye to generic advice and unstructured plans.
+                    <br></p>
+                    <p  style="margin-bottom: 20px;"><b>Why Choose FitSense?</b><br>
+                   With FitSense, achieve faster results with tailored workout regimens, smarter diet choices, and an enjoyable fitness journey. Simplify your path to health and fitness with actionable insights designed just for you.
+                    <br>
+                    <b><p>Take control of your fitness journey today with FitSense!</b></p>
+            </div>
+
+            <div class="img-box">
+                <img src="{{ url_for('static', filename='_ (9).jpeg') }}" class="starbucks" alt="Starbucks">
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><img src="https://raw.githubusercontent.com/farazc60/Project-Images/main/starbucks/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="https://raw.githubusercontent.com/farazc60/Project-Images/main/starbucks/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="https://raw.githubusercontent.com/farazc60/Project-Images/main/starbucks/twitter.png" alt="Twitter"></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
