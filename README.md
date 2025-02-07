@@ -187,9 +187,9 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ---
 
 ## Author
-Yashi Sharma
-https://github.com/yashi-04
-shyashi04@gmail.com
+Yashi Sharma <br>
+https://github.com/yashi-04 <br>
+shyashi04@gmail.com <br>
 
 ---
 
