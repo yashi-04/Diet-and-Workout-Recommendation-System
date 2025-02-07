@@ -52,8 +52,8 @@ To run this project, you need the following:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/diet-workout-recommendation-app.git
-cd diet-workout-recommendation-app
+git clone https://github.com/yashi-04/Diet-and-workout-recommendation-System.git
+cd Diet-and-Workout-Recommendation-System
 ```
 
 ### 2. Set Up a Virtual Environment
