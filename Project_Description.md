@@ -1,1 +1,2 @@
+## Project Description
 FitSense is an AI-powered Diet and Workout Recommendation System utilizing Generative AI (Gemini) for personalized fitness and nutrition plans. Built with Flask for the backend and HTML, CSS, and JavaScript for the frontend, it provides an interactive user experience. The system recommends diet plans and workout routines tailored to user preferences, including age, gender, weight, height, fitness goals, and dietary choices. 
